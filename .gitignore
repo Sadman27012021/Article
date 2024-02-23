@@ -1,12 +1,2 @@
 node_modules
-.eslintignore
-.eslint.cjs
-.prettierignore
-.prettierrc
-npmrc
-package.json
-package-lock.json
-svelte.config.js
-vite.config.js
-README.md
 .svelte-kit
