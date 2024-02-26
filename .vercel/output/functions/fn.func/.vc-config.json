@@ -1,6 +1,0 @@
-{
-	"runtime": "nodejs18.x",
-	"handler": "..\\..\\..\\..\\WEB DEV\\ARTICLE PROJECT\\articleWeb\\.svelte-kit\\vercel-tmp\\index.js",
-	"launcherType": "Nodejs",
-	"experimentalResponseStreaming": true
-}
