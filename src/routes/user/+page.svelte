@@ -16,6 +16,6 @@
 </script>
 
 <h1>Hi there {username}! This is the page which will load when you login</h1>
-<a href="/articles/{userId}">Your articles</a>
+<a href="/myArticles">Your articles</a>
 <a href="/send">Send a new Article.</a>
 <button on:click={handleLogout}>logout</button>

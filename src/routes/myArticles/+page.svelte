@@ -1,27 +1,19 @@
 <script>
-	import { db } from '../../../lib/firebase';
+	import { db } from '../../lib/firebase';
 	import { collection, onSnapshot, query } from 'firebase/firestore';
-	import { page } from '$app/stores';
+	import { authStore } from '../../store/store';
 
-	const userId = $page.params.userId;
+	const userId = $authStore.data.email;
 	const colRef = collection(db, userId);
 	let data = [];
-	let onlyTrue = [];
 
 	async function fetchData() {
 		try {
 			onSnapshot(query(colRef), (snapshot) => {
 				data = []; // Resetting the data array, this might not be necessary
-				onlyTrue = [];
 				snapshot.docs.forEach((doc) => {
 					if (doc.data().heading !== undefined || doc.data().confirmed !== undefined) {
 						data.push({ heading: doc.data().heading, confirmed: doc.data().confirmed });
-					}
-					if (
-						(doc.data().heading !== undefined || doc.data().confirmed !== undefined) &&
-						doc.data().confirmed == true
-					) {
-						onlyTrue.push({ heading: doc.data().heading, confirmed: doc.data().confirmed });
 					}
 				});
 			});
@@ -35,14 +27,17 @@
 	});
 </script>
 
-{#if onlyTrue.length == 0}
-	<h1>There is no Article sent by this User</h1>
+{#if data.length == 0}
+	<h1>There is no Article sent by you</h1>
 {/if}
 {#each data as item}
 	{#if item.confirmed == true}
 		<div>
-			<a href="/articles/{userId}/{item.heading}">{item.heading}.</a>
+			<a href="/articles/{userId}/{item.heading}">{item.heading}. State: {item.confirmed}</a>
 			<hr />
 		</div>
+	{:else}
+		<p>{item.heading}. State: {item.confirmed}</p>
+		<hr />
 	{/if}
 {/each}

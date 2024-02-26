@@ -12,7 +12,7 @@
 	} from 'firebase/firestore';
 	import { authStore } from '../store/store';
 
-	const AuthRoutes = ['/user', '/send'];
+	const AuthRoutes = ['/user', '/send', '/myArticles'];
 
 	onMount(() => {
 		const unsubscribe = auth.onAuthStateChanged(async (user) => {
