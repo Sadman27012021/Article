@@ -38,6 +38,5 @@
 		</div>
 	{:else}
 		<p>{item.heading}. State: {item.confirmed}</p>
-		<hr />
 	{/if}
 {/each}
