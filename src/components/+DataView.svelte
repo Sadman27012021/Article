@@ -40,10 +40,30 @@
 	});
 </script>
 
-{#each data as item}
-	{#if item.confirmed == true}
-		<div>
-			<a href="/articles/{item.email}/{item.heading}">{item.heading}</a>
-		</div>
-	{/if}
-{/each}
+<h1 style="font-size: 3rem; padding-left: 6%">Articles</h1>
+<p style="font-size: 1.2rem; padding-left: 6%">
+	Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus iusto soluta dolore quas
+	magnam dolor? Quis deleniti, minima eum ducimus eaque debitis at fugit? Nihil maxime doloremque
+	hic magni illum! Here is the fruit of the contribution of you guys!
+</p>
+<section style="display: flex; padding:5%">
+	{#each data as item}
+		{#if item.confirmed == true}
+			<div class="p-4 md:w-1/3">
+				<div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+					<img
+						class="lg:h-48 md:h-36 w-full object-cover object-center"
+						src="https://dummyimage.com/721x401"
+						alt="blog"
+					/>
+					<div class="p-6">
+						<a
+							href="/articles/{item.email}/{item.heading}"
+							class="title-font text-lg font-medium text-gray-900 mb-3">{item.heading}</a
+						>
+					</div>
+				</div>
+			</div>
+		{/if}
+	{/each}
+</section>

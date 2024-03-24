@@ -104,6 +104,7 @@
 	});
 </script>
 
+<div class="navbar"></div>
 <div class="mainContainer">
 	<slot />
 </div>

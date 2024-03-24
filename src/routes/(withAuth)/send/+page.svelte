@@ -1,7 +1,7 @@
 <script>
-	import { db } from '../../lib/firebase';
+	import { db } from '../../../lib/firebase';
 	import { doc, setDoc, getDoc } from 'firebase/firestore';
-	import { authStore } from '../../store/store';
+	import { authStore } from '../../../store/store';
 	let data = { heading: '', body: '', confirmed: false };
 	let error = '';
 

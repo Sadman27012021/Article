@@ -1,7 +1,7 @@
 <script>
-	import { db } from '../../lib/firebase';
+	import { db } from '../../../lib/firebase';
 	import { collection, onSnapshot, query } from 'firebase/firestore';
-	import { authStore } from '../../store/store';
+	import { authStore } from '../../../store/store';
 
 	const userId = $authStore.data.email;
 	const colRef = collection(db, userId);
@@ -38,5 +38,6 @@
 		</div>
 	{:else}
 		<p>{item.heading}. State: {item.confirmed}</p>
+		<hr />
 	{/if}
 {/each}
