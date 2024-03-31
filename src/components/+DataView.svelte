@@ -46,7 +46,7 @@
 	magnam dolor? Quis deleniti, minima eum ducimus eaque debitis at fugit? Nihil maxime doloremque
 	hic magni illum! Here is the fruit of the contribution of you guys!
 </p>
-<section style="display: flex; padding:5%">
+<section style="display: flex; padding:5%; flex-wrap: wrap">
 	{#each data as item}
 		{#if item.confirmed == true}
 			<div class="p-4 md:w-1/3">

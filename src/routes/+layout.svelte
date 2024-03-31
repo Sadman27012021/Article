@@ -1,4 +1,5 @@
 <script>
+	import "../app.css";
 	import { onMount } from 'svelte';
 	import { auth, db } from '../lib/firebase';
 	import {
@@ -13,6 +14,7 @@
 	import { authStore } from '../store/store';
 
 	const AuthRoutes = ['/user', '/send', '/myArticles'];
+	const nonAuthRoutes = ['/', '/auth'];
 
 	onMount(() => {
 		const unsubscribe = auth.onAuthStateChanged(async (user) => {
@@ -23,11 +25,7 @@
 				return;
 			}
 
-			if (user && currentPath === '/auth') {
-				window.location.href = '/user';
-				return;
-			}
-			if (user && currentPath === '/') {
+			if (user && nonAuthRoutes.includes(currentPath)) {
 				window.location.href = '/user';
 				return;
 			}

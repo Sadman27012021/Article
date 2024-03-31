@@ -28,16 +28,47 @@
 </script>
 
 {#if data.length == 0}
-	<h1>There is no Article sent by you</h1>
+	<h1 style="padding-left: 10%; font-size: 4rem">There is no Article sent by you.</h1>
 {/if}
-{#each data as item}
-	{#if item.confirmed == true}
-		<div>
-			<a href="/articles/{userId}/{item.heading}">{item.heading}. State: {item.confirmed}</a>
+<h1 style="font-size: 3rem; padding-left:6%; padding-top: 5%">
+	Here is the list of articles sent by the user you.
+</h1>
+
+<section style="display: flex; padding:5%; flex-wrap: wrap;">
+	{#each data as item}
+		{#if item.confirmed == true}
+			<div class="p-4 md:w-1/3">
+				<div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+					<img
+						class="lg:h-48 md:h-36 w-full object-cover object-center"
+						src="https://dummyimage.com/721x401"
+						alt="blog"
+					/>
+					<div class="p-6">
+						<a
+							href="/articles/{userId}/{item.heading}"
+							class="title-font text-lg font-medium text-gray-900 mb-3"
+							>{item.heading} State: {item.confirmed}</a
+						>
+					</div>
+				</div>
+			</div>
+		{:else}
+			<div class="p-4 md:w-1/3">
+				<div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+					<img
+						class="lg:h-48 md:h-36 w-full object-cover object-center"
+						src="https://dummyimage.com/721x401"
+						alt="blog"
+					/>
+					<div class="p-6">
+						<p class="title-font text-lg font-medium text-gray-900 mb-3">
+							{item.heading} State: {item.confirmed}
+						</p>
+					</div>
+				</div>
+			</div>
 			<hr />
-		</div>
-	{:else}
-		<p>{item.heading}. State: {item.confirmed}</p>
-		<hr />
-	{/if}
-{/each}
+		{/if}
+	{/each}
+</section>
