@@ -1,7 +1,12 @@
 <script>
-	import "../app.css";
+	import '../app.css';
 	import { onMount } from 'svelte';
 	import { auth, db } from '../lib/firebase';
+	import { authHandlers } from '../store/store';
+	async function handleLogout() {
+		await authHandlers.logout();
+		window.location.href = '/';
+	}
 	import {
 		getDoc,
 		doc,
@@ -102,15 +107,34 @@
 	});
 </script>
 
-<div class="navbar"></div>
 <div class="mainContainer">
 	<slot />
 </div>
 
+<footer class="text-gray-600 body-font">
+	<div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+		<a href="#top" class="flex title-font font-medium items-center mb-4 md:mb-0">
+			<img src="./Asset.png" style="width:40px;height:40px;" alt="logo" />
+			<span class="ml-3 text-xl">Scientia</span>
+		</a>
+		<p
+			class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"
+		>
+			© 2020 Centre of Circle —
+			<a
+				href="https://www.facebook.com/theCentreofCircle"
+				class="text-gray-600 ml-1"
+				rel="noopener noreferrer"
+				target="_blank">Centre of Circle</a
+			>
+		</p>
+	</div>
+</footer>
+
 <style>
 	.mainContainer {
 		min-height: 100vh;
-		/* background: linear-gradient(to right, #000428, #000046); */
+		background: white;
 		/* color: white; */
 		position: relative;
 		display: flex;

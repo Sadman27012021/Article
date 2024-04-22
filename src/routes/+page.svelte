@@ -1,11 +1,7 @@
 <header class="text-slate-50 bg-zinc-950 body-font shadow-2xl">
 	<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
 		<a href="/" class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-			<img
-				src="https://media.discordapp.net/attachments/1164603841182969906/1218811935567380520/Asset_1.png?ex=66090611&is=65f69111&hm=97f65c6cc51f6704a5f6402c4102226e2c6c9d2eaffa43434f7b3d9ac83fbb11&=&format=webp&quality=lossless"
-				style="width:40px;height:40px;"
-				alt="logo"
-			/>
+			<img src="./Asset.png" style="width:40px;height:40px;" alt="logo" />
 			<span class="ml-3 text-xl">Scientia</span>
 		</a>
 		<nav id="top" class="md:ml-auto flex flex-wrap items-center text-base justify-center">
@@ -54,70 +50,3 @@
 		><a href="/auth" style="color: beige;">Get Started For Free</a>
 	</button>
 </div>
-<p class="text-2xl" style="padding-left:5rem; padding-right: 4rem; width:55%; padding-top:2rem">
-	Check Featured Articles
-</p>
-<section class="text-gray-600 body-font">
-	<div class="container px-9 py-19 pt-3 mx-auto">
-		<div class="flex flex-wrap -m-4">
-			<div class="p-4 md:w-1/3">
-				<div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-					<img
-						class="lg:h-48 md:h-36 w-full object-cover object-center"
-						src="https://dummyimage.com/720x400"
-						alt="blog"
-					/>
-					<div class="p-6">
-						<h1 class="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
-					</div>
-				</div>
-			</div>
-			<div class="p-4 md:w-1/3">
-				<div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-					<img
-						class="lg:h-48 md:h-36 w-full object-cover object-center"
-						src="https://dummyimage.com/721x401"
-						alt="blog"
-					/>
-					<div class="p-6">
-						<h1 class="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
-					</div>
-				</div>
-			</div>
-			<div class="p-4 md:w-1/3">
-				<div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-					<img
-						class="lg:h-48 md:h-36 w-full object-cover object-center"
-						src="https://dummyimage.com/722x402"
-						alt="blog"
-					/>
-					<div class="p-6">
-						<h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<footer class="text-gray-600 body-font">
-	<div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-		<a href="#top" class="flex title-font font-medium items-center mb-4 md:mb-0">
-			<img
-				src="https://media.discordapp.net/attachments/1164603841182969906/1218811935567380520/Asset_1.png?ex=66090611&is=65f69111&hm=97f65c6cc51f6704a5f6402c4102226e2c6c9d2eaffa43434f7b3d9ac83fbb11&=&format=webp&quality=lossless"
-				style="width:40px;height:40px;"
-				alt="logo"
-			/>
-			<span class="ml-3 text-xl">Scientia</span>
-		</a>
-		<p
-			class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"
-		>
-			© 2020 Centre of Circle — <a
-				href="https://www.facebook.com/theCentreofCircle"
-				class="text-gray-600 ml-1"
-				rel="noopener noreferrer"
-				target="_blank">Centre of Circle</a
-			>
-		</p>
-	</div>
-</footer>

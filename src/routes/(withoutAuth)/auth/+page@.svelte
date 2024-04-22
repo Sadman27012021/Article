@@ -91,7 +91,7 @@
 		justify-content: center;
 		flex: 1;
 		padding: 24px;
-		background: linear-gradient(to right, #000428, #000046);
+		background: black;
 		color: white;
 	}
 	form {
@@ -117,7 +117,7 @@
 
 	form label {
 		position: relative;
-		border: 1px solid navy;
+		border: 1px solid rgb(255, 255, 255);
 		border-radius: 5px;
 	}
 
@@ -134,12 +134,12 @@
 	}
 
 	form label:focus-within {
-		border-color: blue;
+		border-color: gray;
 	}
 
 	form button {
-		background: navy;
-		color: white;
+		background: white;
+		color: black;
 		border: none;
 		padding: 14px 0;
 		border-radius: 5px;
@@ -150,7 +150,7 @@
 	}
 
 	form button:hover {
-		background: blue;
+		background: darkslategray;
 	}
 
 	.above,
@@ -158,7 +158,7 @@
 		position: absolute;
 		transform: translateY(-50%);
 		pointer-events: none;
-		color: white;
+		color: black;
 		border-radius: 4px;
 		padding: 0 6px;
 		font-size: 0.8rem;
@@ -167,8 +167,8 @@
 	.above {
 		top: 0;
 		left: 24px;
-		background: navy;
-		border: 1px solid blue;
+		background: darkgray;
+		border: 1px solid gray;
 		font-size: 0.7rem;
 	}
 
@@ -229,7 +229,7 @@
 	}
 
 	.options div p:last-of-type {
-		color: cyan;
+		color: rgb(245, 176, 176);
 		cursor: pointer;
 	}
 
