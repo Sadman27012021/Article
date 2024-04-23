@@ -11,8 +11,8 @@
 </script>
 
 <div class="mx-[15%] my-8">
-	<h1 class="text-7xl leading-normal">
-		Hi there {username}! This is the page which will load when you login. Use the navbar to navigate
-		different pages. Hope you will enjoy using this site!
+	<h1 class="text-[350%] leading-normal font-semibold">
+		Hi there <span class="font-bold">{username}</span> ! Use the navbar to navigate different pages.
+		Hope you will contribute to this novel approach for ad or bonkers free ideal Articles reading experience!
 	</h1>
 </div>
