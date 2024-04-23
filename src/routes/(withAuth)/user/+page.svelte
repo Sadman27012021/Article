@@ -11,7 +11,7 @@
 </script>
 
 <div class="mx-[15%] my-8">
-	<h1 class="text-[350%] leading-normal font-medium">
+	<h1 class="text-[320%] leading-normal font-medium">
 		Hi there <span class="font-bold">{username}</span> ! Use the navbar to navigate different pages.
 		Hope you will contribute to this novel approach for ad or bonkers free ideal Articles reading experience!
 	</h1>
